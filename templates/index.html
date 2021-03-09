@@ -63,7 +63,7 @@ form button{
     <p>Introduce los datos y conozca la tasación de su vivienda</p>
      
     <form action="{{ url_for('predict')}}"method="post" class="formulario">
-        <input type="text" name="address" placeholder="Calle" required="required" />
+        <input type="text" name="address" placeholder="Dirección" required="required" />
         <input type="text" name="sq_mt_built" placeholder="Metros cuadrados" required="required" />
         <input type="text" name="n_rooms" placeholder="Habitaciones" required="required" />
         <input type="text" name="n_bathrooms" placeholder="Baños" required="required" />
