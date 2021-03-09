@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF=8">
+    <title>TASAPI</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<style>
+h1 {
+  color: #E13713;
+  font-family: Roboto;
+  font-weight: 900;
+  font-size: 50px;
+  text-align: center;
+}
+
+body {
+    background-image: url(../static/images/image.jpg);
+}
+
+.ventana {
+    width: 40vw;
+    margin: auto;
+    margin-top: 45px;
+    justify-content: center;
+    text-align: center;
+    background-color: #FFFFFF;
+    padding: 30px;
+}
+
+p{
+    margin-left: 50px;
+    margin-right: 50px;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 12px;
+}
+
+form input{
+    width: 30vw;
+    display:inline-block;
+    margin-top: 5px;
+}
+
+form button{
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    color: white;
+    background-color:#E13713;
+    font-size: 15px;
+}
+
+</style>
+<body>
+    <div class= "ventana">
+	<h1>T<i class="fa fa-home"></i>SAPI</h1>
+
+    <p>Introduce los datos y conozca la tasación de su vivienda</p>
+     
+    <form action="{{ url_for('predict')}}"method="post" class="formulario">
+        <input type="text" name="address" placeholder="Calle" required="required" />
+        <input type="text" name="sq_mt_built" placeholder="Metros cuadrados" required="required" />
+        <input type="text" name="n_rooms" placeholder="Habitaciones" required="required" />
+        <input type="text" name="n_bathrooms" placeholder="Baños" required="required" />
+        <input type="text" name="is_new_development" placeholder="¿Nueva construcción?" required="required" />
+        <input type="text" name="is_renewal_needed" placeholder="¿Necesita reforma?" required="required" />
+        <input type="text" name="is_exterior" placeholder="Exterior" required="required" />
+        <input type="text" name="has_garden" placeholder="Jardín" required="required" />
+        <input type="text" name="has_pool" placeholder="Piscina" required="required" />
+        <input type="text" name="has_terrace" placeholder="Terraza" required="required" />
+        <input type="text" name="has_balcony" placeholder="Balcón" required="required" />
+        <input type="text" name="has_parking" placeholder="Parking" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Precio aproximado de tu vivienda</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+</div>
+
+</body>
+</html>
