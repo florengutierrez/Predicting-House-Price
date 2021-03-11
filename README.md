@@ -16,7 +16,7 @@ El proyecto se divide en 4 fases:
 
 - Realizamos una limpieza y exploración del dataset para comprender los datos.
 
-📚 Librerías: *Pandas, Numpy
+📚 Librerías: * Pandas, Numpy
 
 
 2. Geolocalización:
@@ -26,9 +26,9 @@ El proyecto se divide en 4 fases:
 - Encontrar latitud y longitud de las viviendas por barrio en aquellas que en el primer filtro no se encontraron.
 
 
-📚 Librerías: *Geocoder
-              *Requests
-              *Pandas, Numpy
+📚 Librerías: * Geocoder
+              * Requests
+              * Pandas, Numpy
               
 
 3. Aplicar Modelos de Machine Learning para predecir el precio de la vivienda según características de esta y geolocalización.
@@ -46,7 +46,7 @@ El proyecto se divide en 4 fases:
   
   * Modelo con mayor predicción: **Random Forest**, haciendo uso de GridSearchCV para evaluar y seleccionar los parámetros de este.
   
-📚 Librerías: *SKlearn
+📚 Librerías: * SKlearn
   
 
 4. Montaje de App Web:
@@ -58,5 +58,5 @@ El proyecto se divide en 4 fases:
 
 
 
-*Por favor, haz git clone al repositorio, e introduzca en su terminal dentro de la carpeta del repositorio: **app.py.
+* Por favor, haz git clone al repositorio, e introduzca en su terminal dentro de la carpeta del repositorio: **app.py**.
 
